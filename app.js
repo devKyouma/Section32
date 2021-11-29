@@ -39,6 +39,7 @@ const userSchema = new mongoose.Schema ({
 });
 
 // encryption on the password field and the secret is hidden using dotenv
+// the dotenv code is "process.env"
 userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ['password'] });
 // end encryption
 
